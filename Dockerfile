@@ -1,7 +1,7 @@
 FROM node:22
 RUN apt-get update && apt-get install -y python3 python3-pip git
 
-RUN pip install numpy  
+RUN pipx install numpy  
 WORKDIR /app
 COPY . .
 RUN git submodule update --init --recursive  # Pre-include websockify

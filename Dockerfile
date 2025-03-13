@@ -7,3 +7,4 @@ COPY . .
 RUN git submodule update --init --recursive  # Pre-include websockify
 RUN yarn install
 EXPOSE 6080
+CMD ["./utils/novnc_proxy", "--vnc", "novnc-iknf.onrender.com:5900"]
